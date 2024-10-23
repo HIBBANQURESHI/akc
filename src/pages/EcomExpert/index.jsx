@@ -34,8 +34,10 @@ import ServicesSection from "../../components/EcomServices";
 import CtaBox from "../../components/EcomCta";
 import CounterSection from "../../components/EcomCounter";
 import SuccessStories from "../../components/EcomStories";
-import FAQs from "../../components/EcomFaq";
+import Success from "../../components/EcomSuccess";
 import TestimonialSlider from "../../components/EcomTestimonials";
+import SimpleSlider from "../../components/EcomSlider";
+import FAQ from "../../components/EcomFaq";
 
 
 const EcomExperts = () => {
@@ -47,9 +49,13 @@ const EcomExperts = () => {
       <FeaturesSection/>
       <ServicesSection/>
       <CtaBox/>
-      <CounterSection/>
+      <div className="py-32">
+        <CounterSection/>
+        </div>
       <SuccessStories/>
-      <FAQs/>
+      <SimpleSlider/>
+      <Success/>
+      <FAQ/>
       <TestimonialSlider/>
       
     </Layout>

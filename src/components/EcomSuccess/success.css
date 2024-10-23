@@ -1146,19 +1146,19 @@
 }
 
 .swiper-3d .swiper-slide-shadow-left {
-    background-image: url('/src/assets/download.webp')
+    background-image: linear-gradient(to left,#00000080,#0000)
 }
 
 .swiper-3d .swiper-slide-shadow-right {
-    background-image: url('/src/assets/download.webp')
+    background-image: linear-gradient(to right,#00000080,#0000)
 }
 
 .swiper-3d .swiper-slide-shadow-top {
-    background-image: url('/src/assets/download.webp')
+    background-image: linear-gradient(to top,#00000080,#0000)
 }
 
 .swiper-3d .swiper-slide-shadow-bottom {
-    background-image: url('/src/assets/download.webp')
+    background-image: linear-gradient(to bottom,#00000080,#0000)
 }
 
 .swiper-lazy-preloader {
@@ -7086,14 +7086,12 @@ address {
 
 #case-study-wrapper .counter-section {
     z-index: -1;
-    margin-top: 0;
-    background: url('/src/assets/download.webp')
+    margin-top: 0
 }
 
 @media only screen and (min-width: 992px) {
     #case-study-wrapper .counter-section {
-        margin-top:-220px;
-        background: url('/src/assets/download.webp')
+        margin-top:-220px
     }
 }
 

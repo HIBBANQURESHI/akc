@@ -1,202 +1,131 @@
-import React, { useState, useEffect } from 'react';
-import { gsap } from 'gsap';
+import React from 'react';
+import './index.css';
+import Testi from '../testimonial';
 
 const TestimonialSlider = () => {
-    const [currentPerson, setCurrentPerson] = useState(0);
-    const [isChickenVisible, setIsChickenVisible] = useState(false);
+  const testimonials = [
+    {
+      text: "Their team swiftly set up my Shopify store. Sales are booming!",
+      name: "Olivia Garcia",
+      title: "Director, CEO - Maxcom",
+      img: "https://ecomexpertsllc.s3.amazonaws.com/user1.jpg",
+    },
+    {
+      text: "Great service, very professional. Highly recommend to others!",
+      name: "Liam Jones",
+      title: "Senior Designer - Creative Agency",
+      img: "https://ecomexpertsllc.s3.amazonaws.com/user2.jpg",
+    },
+    {
+      text: "Their product selection for my store was spot-on. Seeing great returns!",
+      name: "Barbara Jackson",
+      title: "Manager - S&N Stores",
+      img: "https://ecomexpertsllc.s3.amazonaws.com/user3.jpg",
+    },
+    {
+      text: "Superb maintenance of my Amazon store. Sales have doubled.",
+      name: "Andrew Devis",
+      title: "Founder - Carz Pro",
+      img: "https://ecomexpertsllc.s3.amazonaws.com/user4.jpg",
+    },
+    {
+      text: "Fantastic support throughout my entire project. Will definitely return!",
+      name: "Emma Smith",
+      title: "Owner - Trendy Styles",
+      img: "https://ecomexpertsllc.s3.amazonaws.com/user5.jpg",
+    },
+    {
+        text: "I couldn't be happier with the design of my online store. It's user-friendly and attractive!",
+        name: "Liam Johnson",
+        title: "Founder - TechWave",
+        img: "https://ecomexpertsllc.s3.amazonaws.com/user2.jpg",
+      },
+  {
+        text: "The team provided exceptional support throughout the process. Highly recommend!",
+        name: "Emma Wilson",
+        title: "Marketing Manager - GreenLeaf",
+        img: "https://ecomexpertsllc.s3.amazonaws.com/user3.jpg",
+      },
+  {
+        text: "Thanks to their expertise, my store is thriving. The sales have increased significantly!",
+        name: "Noah Smith",
+        title: "Owner - Trendy Ties",
+        img: "https://ecomexpertsllc.s3.amazonaws.com/user4.jpg",
+      },
+  {
+        text: "The entire setup process was seamless. I love how my brand is represented online!",
+        name: "Sophia Brown",
+        title: "Co-Founder - Vintage Vibes",
+        img: "https://ecomexpertsllc.s3.amazonaws.com/user5.jpg",
+      },
+  {
+        text: "I received outstanding service from start to finish. My store has never looked better!",
+        name: "James Lee",
+        title: "CEO - Fresh Fashions",
+        img: "https://ecomexpertsllc.s3.amazonaws.com/user6.jpg",
+      },
+  
+  ];
 
-    const people = [
-        {
-            photo: 'url("https://cdn.pixabay.com/photo/2018/03/06/22/57/portrait-3204843_960_720.jpg")',
-            name: "Susan Smith",
-            profession: "Manager - S&N Stores",
-            description: "Their product selection for my store was spot-on. Seeing great returns!."
-        },
-        {
-            photo: "url('https://cdn.pixabay.com/photo/2019/02/11/20/20/woman-3990680_960_720.jpg')",
-            name: "Sofia Perez",
-            profession: "Founder - Carz Pro",
-            description: "Efficient, Professional, and Profitable. That's how I'd describe their service"
-        },
-        {
-            photo: "url('https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_960_720.jpg')",
-            name: "Mark Anderson",
-            profession: "Founder - Graffin",
-            description: "Their team swiftly set up my Shopify store. Sales are booming!."
-        },
-        {
-            photo: "url('https://cdn.pixabay.com/photo/2014/10/30/17/32/boy-509488_960_720.jpg')",
-            name: "Henry Jones",
-            profession: "CEO - Product Hub",
-            description: "I switched to them for Walmart account management. Best Decision Ever!"
-        }
-    ];
-
-    const styles = {
-        section: {
-            backgroundColor: 'black',
-            color: 'white',
-            padding: '2rem 0',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            flexDirection: 'column',
-            height: '100vh',
-        },
-        contentWrapper: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            position: 'relative',
-            width: '90%',  // Use 90% width for responsiveness
-            maxWidth: '100rem',
-            margin: '0 auto',
-        },
-        h1: {
-            marginBottom: '2rem',
-            fontSize: 'calc(2.3rem + 1vmin)',
-            textAlign: 'center',  // Center align the heading
-        },
-        blueLine: {
-            height: '0.3rem',
-            width: '6rem',
-            backgroundColor: 'rgb(253, 216, 53)',
-            marginBottom: '3rem',
-        },
-        wrapperForArrows: {
-            position: 'relative',
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-        },
-        reviewWrap: {
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: '100%',
-            transition: 'opacity 0.4s',
-            opacity: 1,
-            padding: '0 1rem',  // Add padding for smaller screens
-        },
-        imgDiv: {
-            borderRadius: '50%',
-            width: '10rem',
-            height: '10rem',
-            backgroundSize: 'cover',
-            marginBottom: '1rem',
-            backgroundImage: people[currentPerson].photo,
-            boxShadow: '5px -3px rgb(253, 216, 53)',
-        },
-        personName: {
-            marginBottom: '0.5rem',
-            fontSize: '1.5rem',
-            fontWeight: 'bold',
-            textAlign: 'center',  // Center align the name
-        },
-        profession: {
-            fontSize: '1rem',
-            marginBottom: '0.5rem',
-            color: 'rgb(253, 216, 53)',
-            textAlign: 'center',  // Center align the profession
-        },
-        description: {
-            fontSize: '1rem',
-            width: '100%',  // Use full width for description
-            maxWidth: '40rem',
-            textAlign: 'center',
-            marginBottom: '1rem',
-            color: 'rgb(253, 216, 53)',
-            lineHeight: '1.5rem',
-            padding: '0 1rem',  // Add padding for smaller screens
-        },
-        arrowWrap: {
-            cursor: 'pointer',
-            width: '30px',
-            height: '30px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            position: 'absolute',
-        },
-        arrow: {
-            width: '1.4rem',
-            height: '1.4rem',
-            border: `solid rgb(253, 216, 53)`,
-            borderWidth: '0 0.5rem 0.5rem 0',
-            transition: 'transform 0.3s',
-        },
-        surpriseMeBtn: {
-            border: '2px solid rgb(79, 143, 226)',
-            backgroundColor: 'rgb(224, 238, 255)',
-            color: 'rgb(79, 143, 226)',
-            borderRadius: '2rem',
-            padding: '0.5rem 0',
-            width: '150px',
-            textAlign: 'center',
-            transition: 'background-color 0.3s, transform 0.3s',
-            cursor: 'pointer',
-            marginBottom: '1rem',
-        },
-        chickenStyle: {
-            display: isChickenVisible ? 'block' : 'none',
-            opacity: 1,
-            transition: 'opacity 0.4s',
-        },
-    };
-
-    const setNextCard = (direction) => {
-        const nextPerson = direction === 'right' 
-            ? (currentPerson === people.length - 1 ? 0 : currentPerson + 1)
-            : (currentPerson === 0 ? people.length - 1 : currentPerson - 1);
-        
-        gsap.to('#reviewWrap', {
-            opacity: 0,
-            onComplete: () => {
-                setCurrentPerson(nextPerson);
-                gsap.to('#reviewWrap', { opacity: 1 });
-            }
-        });
-    };
-
-    const toggleChicken = () => {
-        setIsChickenVisible(!isChickenVisible);
-    };
-
-    useEffect(() => {
-        const imgDiv = document.getElementById("imgDiv");
-        imgDiv.style.backgroundImage = people[currentPerson].photo;
-    }, [currentPerson]);
-
-    return (
-        <section style={styles.section}>
-            <div style={styles.contentWrapper}>
-                <h1 style={styles.h1} className='font-bold'>What our clients say</h1>
-                <div style={styles.blueLine}></div>
-                <div style={styles.wrapperForArrows}>
-                    <div 
-                        style={{ ...styles.arrowWrap, left: '10%', zIndex: 10 }} 
-                        onClick={() => setNextCard('left')}
-                    >
-                        <div style={{ ...styles.arrow, transform: 'rotate(135deg)' }} />
+  return (
+    <section className="testimonials-section">
+      <div className="top-row">
+        <div className="inner-wrap">
+          <div className="left-col" style={{ color: 'rgb(255, 255, 255)' }}>
+            <h3 className="h2-regular aos-init aos-animate" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
+              Testimonials
+            </h3>
+            <h3 className="h1 aos-init aos-animate" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
+              Our customers sharing<br />their experience
+            </h3>
+            <div className="videoSlider swiper-container swiper-initialized swiper-horizontal swiper-backface-hidden">
+              <div className="swiper-wrapper">
+                <div className="swiper-slide swiper-slide-next swiper-slide-prev" data-swiper-slide-index="1">
+                  <div className="thumbnail">
+                    <img src="/src/assets/test1.jpg" alt="Thumbnail" />
+                  </div>
+                  <div className="bottom">
+                    <button>
+                      <img src="data:image/webp;base64,UklGRtIBAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSBIBAAABgFXbTl1rS4gDcEIdcBxUAhKQgAQkVEIkICESKiHnXUju4zciJgCTKZc+RFVV+KiJYJcq62UuwUZincxpXWJdKHlNZF3cw4Jy6nLZpzU12ebQUKMjTIiiZiVciqKGha4MNT3ou6bG21e7mi9fRLF3hk9dHfKHrC7TO/HBb5I6TS/shQFEdUtA8VMB9sMgdUzJU66eyuGps6chnkT/3eJJhifuno7iqWZPG3kisB8Gqp8CkJ8AgL0wACQv2wvYh+Bt8pHfgT10fIynPQmfUOzt+LZZa/iahq2BiySWJFxBFDsScD0OK4MwtdlohMm7rDsL5se+igOWZlnBG5ZvPIs3mIyFr3El2KWtHiwvMnq5ESYDVlA4IJoAAABQBgCdASo8ADwAPpFCmUglpCKhMBgIALASCWkAFcAGBD4ASjMYl0E5RfLTDuN17T+0r7XMod9Pj7ajkAD+8E+//3d3/+7iP//dn3/63wKHXKD2M1Pv31SpLKlHS5IX14TzwHud6F3kn+D43VHwjoQRhJMa9ncvSSMz6bAq/WM87pn9V/XKQCZ+dUuP3Kb//dnv/7sK//91gAAA" alt="Play" />
+                    </button>
+                    <div className="details">
+                      <p className="name">Eliza Grace</p>
+                      <p className="title">Director - Bombas</p>
                     </div>
-                    <div id="reviewWrap" style={styles.reviewWrap}>
-                        <div id="imgDiv" style={styles.imgDiv}></div>
-                        <div id="personName" style={styles.personName} className='font-semibold'>{people[currentPerson].name}</div>
-                        <div id="profession" style={styles.profession} className='font-semibold'>{people[currentPerson].profession}</div>
-                        <div id="description" style={styles.description} className='font-semibold'>{people[currentPerson].description}</div>
-                    </div>
-                    <div 
-                        style={{ ...styles.arrowWrap, right: '10%', zIndex: 10 }} 
-                        onClick={() => setNextCard('right')}
-                    >
-                        <div style={{ ...styles.arrow, transform: 'rotate(-45deg)' }} />
-                    </div>
+                  </div>
                 </div>
+                <div className="swiper-slide swiper-slide-active" data-swiper-slide-index="0">
+                  <div className="thumbnail">
+                    <img src="/src/assets/test2.jpg" alt="Thumbnail" />
+                  </div>
+                  <div className="bottom">
+                    <button>
+                      <img src="data:image/webp;base64,UklGRtIBAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSBIBAAABgFXbTl1rS4gDcEIdcBxUAhKQgAQkVEIkICESKiHnXUju4zciJgCTKZc+RFVV+KiJYJcq62UuwUZincxpXWJdKHlNZF3cw4Jy6nLZpzU12ebQUKMjTIiiZiVciqKGha4MNT3ou6bG21e7mi9fRLF3hk9dHfKHrC7TO/HBb5I6TS/shQFEdUtA8VMB9sMgdUzJU66eyuGps6chnkT/3eJJhifuno7iqWZPG3kisB8Gqp8CkJ8AgL0wACQv2wvYh+Bt8pHfgT10fIynPQmfUOzt+LZZa/iahq2BiySWJFxBFDsScD0OK4MwtdlohMm7rDsL5se+igOWZlnBG5ZvPIs3mIyFr3El2KWtHiwvMnq5ESYDVlA4IJoAAABQBgCdASo8ADwAPpFCmUglpCKhMBgIALASCWkAFcAGBD4ASjMYl0E5RfLTDuN17T+0r7XMod9Pj7ajkAD+8E+//3d3/+7iP//dn3/63wKHXKD2M1Pv31SpLKlHS5IX14TzwHud6F3kn+D43VHwjoQRhJMa9ncvSSMz6bAq/WM87pn9V/XKQCZ+dUuP3Kb//dnv/7sK//91gAAA" alt="Play" />
+                    </button>
+                    <div className="details">
+                      <p className="name">Brooklyn Taylor</p>
+                      <p className="title">General Manager - Martix Venture</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                <span className="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                <span className="swiper-pagination-bullet"></span>
+              </div>
             </div>
-        </section>
-    );
+          </div>
+          <div className="right-col py-8 gap-6">
+            <div className="testimonial-container gap-6">
+              <div className="testimonial-cards py-64">
+              <Testi />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default TestimonialSlider;
