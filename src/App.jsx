@@ -11,7 +11,7 @@ import Printing from "./pages/Home/Printing";
 import WebDesign from "./pages/WebDesign";
 import Seo from "./pages/Seo";
 import MobileApps from "./pages/MobileApps";
-import VideoAnimation from "./pages/VideoAnimation";
+import EcomExpert from "./pages/EcomExpert";
 import CollabratePage from "./pages/CollabrationPage";
 import TermsConditons from "./pages/Footer/TermsConditions";
 import PrivacyPolicy from "./pages/Footer/PrivacyPolicy";
@@ -61,8 +61,8 @@ const router = createBrowserRouter([
     element: <MobileApps/>,
   },
   {
-    path: "/explainer-video",
-    element: <VideoAnimation/>,
+    path: "/ecom-experts",
+    element: <EcomExpert/>,
   },
   {
     path: "/terms-&-conditions",

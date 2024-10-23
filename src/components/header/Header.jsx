@@ -51,7 +51,7 @@ export default function Header() {
               <IoCall />
             </span>
             <span className="text-sm text-gray-600" style={{ fontSize: '16px', fontWeight: '500' }}>
-              Call Us: <span className="font-bold">(800) 880-4109</span>
+              Call Us: <span className="font-bold">(832) 278-2818</span>
             </span>
           </div>
           <button className="button-header px-7 py-3 text-white bg-yellow-500 rounded hover:bg-yellow-600" style={{ fontSize: '15px', fontWeight: '500' }}>
@@ -139,8 +139,8 @@ export default function Header() {
                 <Link to="/mobile" className={`hover:underline ${isActive("/mobile") ? "font-bold" : ""}`}>
                   Mobile Apps
                 </Link>
-                <Link to="/explainer-video" className={`hover:underline ${isActive("/explainer-video") ? "font-bold" : ""}`}>
-                  Video Animation
+                <Link to="/ecom-experts" className={`hover:underline ${isActive("/ecom-experts") ? "font-bold" : ""}`}>
+                  Ecom Experts
                 </Link>
               </div>
             </motion.nav>
@@ -166,8 +166,8 @@ export default function Header() {
           <Link to="/mobile" className={`hover:underline ${isActive("/mobile") ? "font-bold" : ""}`} id="NavFont">
             Mobile Apps
           </Link>
-          <Link to="/explainer-video" className={`hover:underline ${isActive("/explainer-video") ? "font-bold" : ""}`} id="NavFont">
-            Video Animation
+          <Link to="/ecom-experts" className={`hover:underline ${isActive("/ecom-experts") ? "font-bold" : ""}`} id="NavFont">
+            Ecom Experts
           </Link>
         </div>
       </div>

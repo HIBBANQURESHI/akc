@@ -93,9 +93,9 @@ const Footer = () => {
             <p>
               <Link
                 className="inline-flex text-black font-semibold gap-x-2 hover:text-gray-200 focus:outline-none focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200"
-                to="/explainer-video"
+                to="/ecom-experts"
               >
-                Video Animation
+                Ecom Experts
               </Link>
             </p>
 
@@ -188,7 +188,7 @@ const Footer = () => {
       <div className="grid mt-5 sm:mt-12 gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
         <div className="flex items-center justify-between">
           <p className="text-sm text-black font-semibold dark:text-neutral-400">
-            © 2024 Preline Labs.
+            © All Rights Reserved AKC Link Tech Digitizing.
           </p>
         </div>
         {/* End Col */}

@@ -82,11 +82,11 @@ const Home = () => {
           }}>
             &times;
           </button>
-          <h1 style={{ marginBottom: '20px', fontWeight: '600', fontSize: '24px' }} className='text-yellow-600 font-bold'>Contact Us</h1>
-          <p style={{ marginBottom: '20px', fontSize: '16px' }} className='text-yellow-600 font-semibold'>For more information, please complete this form.</p>
+          <h1 style={{ marginBottom: '20px', fontWeight: '600', fontSize: '24px' }} className='text-yellow-500 font-bold'>Contact Us</h1>
+          <p style={{ marginBottom: '20px', fontSize: '16px' }} className='text-yellow-500 font-semibold'>For more information, please complete this form.</p>
           <form action="">
             <div className="form-group" style={{ marginBottom: '15px' }}>
-              <label style={{ fontWeight: '600', marginBottom: '5px' }} className='text-yellow-300'>Name</label>
+              <label style={{ fontWeight: '600', marginBottom: '5px' }} className='text-yellow-500'>Name</label>
               <input type="text" className="form-control" style={{
                 backgroundColor: '#f9f9f9',
                 color: '#333',
@@ -98,7 +98,7 @@ const Home = () => {
               }} />
             </div>
             <div className="form-group" style={{ marginBottom: '15px' }}>
-              <label style={{ fontWeight: '600', marginBottom: '5px' }} className='text-yellow-300'>E-Mail Address</label>
+              <label style={{ fontWeight: '600', marginBottom: '5px' }} className='text-yellow-500'>E-Mail Address</label>
               <input type="text" className="form-control" style={{
                 backgroundColor: '#f9f9f9',
                 color: '#333',
@@ -110,7 +110,7 @@ const Home = () => {
               }} />
             </div>
             <div className="form-group" style={{ marginBottom: '15px' }}>
-              <label style={{ fontWeight: '600', marginBottom: '5px' }} className='text-yellow-300'>Phone Number</label>
+              <label style={{ fontWeight: '600', marginBottom: '5px' }} className='text-yellow-500'>Phone Number</label>
               <input type="text" className="form-control" style={{
                 backgroundColor: '#f9f9f9',
                 color: '#333',
@@ -126,7 +126,7 @@ const Home = () => {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               style={{
-                backgroundColor: isHovered ? 'white' : 'yellow', // Change background on hover
+                backgroundColor: isHovered ? 'white' : '', // Change background on hover
                 color: isHovered ? 'black' : 'black', // Change text color on hover
                 padding: '10px 20px',
                 border: 'none',
@@ -136,7 +136,7 @@ const Home = () => {
                 marginTop: '10px',
                 transition: 'background-color 0.3s, color 0.3s', // Smooth transition
               }}
-              className='font-semibold'
+              className='font-semibold bg-yellow-500'
             >
               Submit
             </button>

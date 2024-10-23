@@ -1,0 +1,131 @@
+@keyframes scroll {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        transform: translateX(-50%); /* Adjust for full track width */
+    }
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-track {
+    display: flex;
+    animation: scroll 30s linear infinite; /* Faster scrolling */
+    width: calc(100% * 2); /* Adjust to double for seamless effect */
+}
+
+/* Image styles */
+.success-image {
+    width: 300px; /* Fixed width for each image */
+    height: 300px; /* Fixed height for each image */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-right: 15px; /* Add gap between images */
+}
+
+/* Remove margin from the last image */
+.success-image:last-child {
+    margin-right: 0; /* Remove right margin for the last image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .slide-track {
+        animation: scroll 25s linear infinite; /* Speed adjustment for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .slide-track {
+        animation: scroll 20s linear infinite; /* Speed adjustment for mobile */
+    }
+
+    .slider {
+        padding: 0 10px; /* Add padding for mobile */
+    }
+}
+
+/* Flexbox for better responsiveness */
+@media (max-width: 640px) {
+    .slide-track {
+        flex-direction: column; /* Stack images on smaller screens */
+        animation: none; /* Disable animation for smaller screens */
+    }
+    
+    .success-image {
+        width: 90%; /* Reduce width for mobile */
+        margin: 0 auto; /* Center the image */
+        max-height: 200px; /* Set max height for images */
+    }
+}
+@keyframes scroll {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        transform: translateX(-50%); /* Adjust for full track width */
+    }
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-track {
+    display: flex;
+    animation: scroll 30s linear infinite; /* Faster scrolling */
+    width: calc(100% * 2); /* Adjust to double for seamless effect */
+}
+
+/* Image styles */
+.success-image {
+    width: 300px; /* Fixed width for each image */
+    height: 300px; /* Fixed height for each image */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-right: 15px; /* Add gap between images */
+}
+
+/* Remove margin from the last image */
+.success-image:last-child {
+    margin-right: 0; /* Remove right margin for the last image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .slide-track {
+        animation: scroll 25s linear infinite; /* Speed adjustment for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .slide-track {
+        animation: scroll 20s linear infinite; /* Speed adjustment for mobile */
+        flex-wrap: nowrap; /* Ensure images do not wrap */
+    }
+
+    .success-image {
+        width: 250px; /* Adjusted width for mobile */
+        height: 200px; /* Adjusted height for mobile */
+    }
+
+    .slider {
+        padding: 0 10px; /* Add padding for mobile */
+    }
+}
+
+@media (max-width: 640px) {
+    .slide-track {
+        flex-direction: column; /* Stack images on smaller screens */
+        animation: none; /* Disable animation for smaller screens */
+    }
+    
+    .success-image {
+        width: 90%; /* Reduce width for mobile */
+        margin: 0 auto; /* Center the image */
+        max-height: 200px; /* Set max height for images */
+    }
+}
