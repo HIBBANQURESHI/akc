@@ -465,7 +465,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Amazon Store Creation</h2>
-          <p className='text-white text-xl'>AKC Link Tech Digitizing stands out as a leading Amazon company, offering valuable assistance to businesses in navigating the dynamic ecommerce landscape through a strategic approach. Our focus revolves around implementing a competitive strategy that enhances brand visibility and maximizes sales growth.</p>
+          <p className='text-white text-md py-6'>AKC Link Tech Digitizing stands out as a leading Amazon company, offering valuable assistance to businesses in navigating the dynamic ecommerce landscape through a strategic approach. Our focus revolves around implementing a competitive strategy that enhances brand visibility and maximizes sales growth.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -515,7 +515,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Amazon FBA Automation  </h2>
-          <p className='text-white text-xl'>Experience a seamless ecommerce journey with our commitment to the Fulfillment by Amazon (FBA) program. Our fully automated approach ensures optimal performance, covering labeling, packing, product warehousing, and shipping. We guarantee a hassle-free experience for our clients throughout the entire process.</p>
+          <p className='text-white text-md py-6'>Experience a seamless ecommerce journey with our commitment to the Fulfillment by Amazon (FBA) program. Our fully automated approach ensures optimal performance, covering labeling, packing, product warehousing, and shipping. We guarantee a hassle-free experience for our clients throughout the entire process.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -564,7 +564,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Amazon Private Labelled</h2>
-          <p className='text-white text-xl'>Unlock the potential of your brand with our Amazon Private Label Services. We specialise in crafting personalised strategies for product development, packaging, and branding. Our services empower you to launch exclusive, private-labeled products on the Amazon platform, distinguishing your brand in the competitive marketplace. From market research to product design and launch, we guide you through every stage, ensuring quality and compliance.</p>
+          <p className='text-white text-md py-6'>Unlock the potential of your brand with our Amazon Private Label Services. We specialise in crafting personalised strategies for product development, packaging, and branding. Our services empower you to launch exclusive, private-labeled products on the Amazon platform, distinguishing your brand in the competitive marketplace. From market research to product design and launch, we guide you through every stage, ensuring quality and compliance.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -615,7 +615,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Amazon A+ Content</h2>
-          <p className='text-white text-xl'>Elevate your product listings on Amazon with our A+ Content Services. Our expert team enhances your product pages by incorporating visually appealing and informative content, effectively showcasing the unique features and benefits of your products. Through compelling storytelling, enhanced images, and engaging multimedia, we elevate the shopping experience for potential customers.</p>
+          <p className='text-white text-md py-6'>Elevate your product listings on Amazon with our A+ Content Services. Our expert team enhances your product pages by incorporating visually appealing and informative content, effectively showcasing the unique features and benefits of your products. Through compelling storytelling, enhanced images, and engaging multimedia, we elevate the shopping experience for potential customers.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -666,7 +666,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Amazon Product Hunting</h2>
-          <p className='text-white text-xl'>At Ecom Experts, we understand the fast-paced world of ecommerce. We go beyond merely adapting – we thrive by helping brands gain meaningful visibility. Through advanced product listing and optimization strategies, we ensure your brand not only stays relevant but becomes a standout presence in the competitive landscape. </p>
+          <p className='text-white text-md py-6'>At Ecom Experts, we understand the fast-paced world of ecommerce. We go beyond merely adapting – we thrive by helping brands gain meaningful visibility. Through advanced product listing and optimization strategies, we ensure your brand not only stays relevant but becomes a standout presence in the competitive landscape. </p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -717,7 +717,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Amazon PPC</h2>
-          <p className='text-white text-xl'>Supercharge your Amazon advertising strategy with our PPC (Pay-Per-Click) Services. We specialize in optimizing your campaigns to maximize visibility and drive targeted traffic to your products. Our data-driven approach ensures efficient budget allocation, strategic keyword targeting, and compelling ad creatives. From campaign setup to continuous monitoring and optimization, we tailor our services to boost your ROI and sales on the Amazon platform.</p>
+          <p className='text-white text-md py-6'>Supercharge your Amazon advertising strategy with our PPC (Pay-Per-Click) Services. We specialize in optimizing your campaigns to maximize visibility and drive targeted traffic to your products. Our data-driven approach ensures efficient budget allocation, strategic keyword targeting, and compelling ad creatives. From campaign setup to continuous monitoring and optimization, we tailor our services to boost your ROI and sales on the Amazon platform.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -768,7 +768,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Walmart Store Creation</h2>
-          <p className='text-white text-xl'>AKC stands as a leading automation agency, dedicated to propelling brands to the pinnacle by cultivating captivating identities. Through our extensive online ecom store design services, we mold brand stores with distinctive features and a core ideology. Embracing remarkable ideas and patterns, we reshape brands and enhance their clientele.</p>
+          <p className='text-white text-md py-6'>AKC stands as a leading automation agency, dedicated to propelling brands to the pinnacle by cultivating captivating identities. Through our extensive online ecom store design services, we mold brand stores with distinctive features and a core ideology. Embracing remarkable ideas and patterns, we reshape brands and enhance their clientele.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -819,7 +819,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Walmart Private Labelled</h2>
-          <p className='text-white text-xl'>Discover the capabilities of your brand through our Walmart Private Label Services. We specialize in creating personalized strategies for product development, packaging, and branding. Our services enable you to introduce exclusive, private-labeled products on the Amazon platform, setting your brand apart in the competitive marketplace.</p>
+          <p className='text-white text-md py-6'>Discover the capabilities of your brand through our Walmart Private Label Services. We specialize in creating personalized strategies for product development, packaging, and branding. Our services enable you to introduce exclusive, private-labeled products on the Amazon platform, setting your brand apart in the competitive marketplace.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -870,7 +870,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Walmart Dropshipping</h2>
-          <p className='text-white text-xl'>Discover streamlined ecommerce success with our Walmart Dropshipping Services. We seamlessly handle inventory, order fulfillment, and shipping logistics, ensuring your business thrives effortlessly. Partner with us to unlock the potential of dropshipping on Walmart, maximizing sales and minimizing operational complexities for a more efficient and profitable venture.</p>
+          <p className='text-white text-md py-6'>Discover streamlined ecommerce success with our Walmart Dropshipping Services. We seamlessly handle inventory, order fulfillment, and shipping logistics, ensuring your business thrives effortlessly. Partner with us to unlock the potential of dropshipping on Walmart, maximizing sales and minimizing operational complexities for a more efficient and profitable venture.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -921,7 +921,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Walmart Product Hunting</h2>
-          <p className='text-white text-xl'>Walmart product hunting involves identifying profitable products to sell on e-commerce platforms, primarily by sourcing them from Walmart. The process includes researching items with high demand, low competition, and good profit margins. Sellers typically look for products that can be resold on marketplaces like Amazon, eBay, or even Walmart’s own platform. Successful product hunting involves analyzing pricing, customer reviews, and sales trends to ensure that the selected products will generate a good return on investment. This strategy is popular among drop shippers and resellers looking to capitalize on Walmart’s vast inventory.</p>
+          <p className='text-white text-md py-6'>Walmart product hunting involves identifying profitable products to sell on e-commerce platforms, primarily by sourcing them from Walmart. The process includes researching items with high demand, low competition, and good profit margins. Sellers typically look for products that can be resold on marketplaces like Amazon, eBay, or even Walmart’s own platform. Successful product hunting involves analyzing pricing, customer reviews, and sales trends to ensure that the selected products will generate a good return on investment. This strategy is popular among drop shippers and resellers looking to capitalize on Walmart’s vast inventory.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -972,7 +972,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Walmart WFS</h2>
-          <p className='text-white text-xl'>Walmart Fulfillment Services (WFS) is a program where Walmart handles storage, packing, and shipping of products for third-party sellers who sell on Walmart.com. Similar to Amazon's FBA (Fulfillment by Amazon), WFS allows sellers to send their inventory to Walmart's fulfillment centers, where Walmart manages the logistics, ensuring fast and reliable delivery to customers. The service includes benefits like Walmart’s two-day delivery, customer service, and returns management. Sellers using WFS can leverage Walmart's vast distribution network, allowing them to focus on scaling their business while Walmart handles fulfillment.</p>
+          <p className='text-white text-md py-6'>Walmart Fulfillment Services (WFS) is a program where Walmart handles storage, packing, and shipping of products for third-party sellers who sell on Walmart.com. Similar to Amazon's FBA (Fulfillment by Amazon), WFS allows sellers to send their inventory to Walmart's fulfillment centers, where Walmart manages the logistics, ensuring fast and reliable delivery to customers. The service includes benefits like Walmart’s two-day delivery, customer service, and returns management. Sellers using WFS can leverage Walmart's vast distribution network, allowing them to focus on scaling their business while Walmart handles fulfillment.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -1023,7 +1023,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Shopify Store Creation</h2>
-          <p className='text-white text-xl'>With a focus on scalability and performance, our Shopify Store Creation services lay the foundation for a successful ecommerce venture. Let us navigate the complexities of setting up your store, allowing you to focus on what matters most – growing your business. Experience the ease and excellence of our Shopify Store Creation services today.</p>
+          <p className='text-white text-md py-6'>With a focus on scalability and performance, our Shopify Store Creation services lay the foundation for a successful ecommerce venture. Let us navigate the complexities of setting up your store, allowing you to focus on what matters most – growing your business. Experience the ease and excellence of our Shopify Store Creation services today.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -1074,7 +1074,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Shopify Automation</h2>
-          <p className='text-white text-xl'>Our dropshipping agency service is designed with entrepreneurs and mid-sized businesses in mind, providing a hassle-free supplier search and fulfillment process. We're here to assist in discovering and enhancing the sales of top-performing dropshipping products, all with personalized labels.</p>
+          <p className='text-white text-md py-6'>Our dropshipping agency service is designed with entrepreneurs and mid-sized businesses in mind, providing a hassle-free supplier search and fulfillment process. We're here to assist in discovering and enhancing the sales of top-performing dropshipping products, all with personalized labels.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -1125,7 +1125,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Shopify Store Optimization</h2>
-          <p className='text-white text-xl'>With our proven strategies, your Shopify store becomes a conversion powerhouse, turning visitors into loyal customers. Stay ahead of the competition, as we continuously refine and adapt your store for optimal performance in the ever-evolving ecommerce landscape. Experience the transformation – elevate your Shopify store with our Optimization Services today!</p>
+          <p className='text-white text-md py-6'>With our proven strategies, your Shopify store becomes a conversion powerhouse, turning visitors into loyal customers. Stay ahead of the competition, as we continuously refine and adapt your store for optimal performance in the ever-evolving ecommerce landscape. Experience the transformation – elevate your Shopify store with our Optimization Services today!</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -1176,7 +1176,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Shopify Product Hunting</h2>
-          <p className='text-white text-xl'>We navigate the ecommerce landscape to discover hidden gems, ensuring your store stands out and stays ahead of the competition. With our expertise in Shopify Product Hunting, seize the opportunity to expand your product range and attract a diverse customer base, all while maximizing profitability and staying at the forefront of industry trends.</p>
+          <p className='text-white text-md py-6'>We navigate the ecommerce landscape to discover hidden gems, ensuring your store stands out and stays ahead of the competition. With our expertise in Shopify Product Hunting, seize the opportunity to expand your product range and attract a diverse customer base, all while maximizing profitability and staying at the forefront of industry trends.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -1227,7 +1227,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Shopify Store Marketing</h2>
-          <p className='text-white text-xl'>Embrace a holistic marketing strategy that positions your brand at the forefront of the digital marketplace. With our Shopify Store Marketing services, witness the transformative power of strategic promotion, enhancing your store's visibility, and ultimately, your bottom line.</p>
+          <p className='text-white text-md py-6'>Embrace a holistic marketing strategy that positions your brand at the forefront of the digital marketplace. With our Shopify Store Marketing services, witness the transformative power of strategic promotion, enhancing your store's visibility, and ultimately, your bottom line.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -1278,7 +1278,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Etsy Store Creation</h2>
-          <p className='text-white text-xl'>With a focus on scalability and performance, our Etsy Store Creation services lay the foundation for a successful ecommerce venture. Let us navigate the complexities of setting up your store, allowing you to focus on what matters most – growing your business. Experience the ease and excellence of our Etsy Store Creation services today.</p>
+          <p className='text-white text-md py-6'>With a focus on scalability and performance, our Etsy Store Creation services lay the foundation for a successful ecommerce venture. Let us navigate the complexities of setting up your store, allowing you to focus on what matters most – growing your business. Experience the ease and excellence of our Etsy Store Creation services today.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -1329,7 +1329,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Etsy Automation</h2>
-          <p className='text-white text-xl'>Our dropshipping agency service is designed with entrepreneurs and mid-sized businesses in mind, providing a hassle-free supplier search and fulfillment process. We're here to assist in discovering and enhancing the sales of top-performing dropshipping products, all with personalized labels.</p>
+          <p className='text-white text-md py-6'>Our dropshipping agency service is designed with entrepreneurs and mid-sized businesses in mind, providing a hassle-free supplier search and fulfillment process. We're here to assist in discovering and enhancing the sales of top-performing dropshipping products, all with personalized labels.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -1380,7 +1380,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Etsy Store Optimization</h2>
-          <p className='text-white text-xl'>With our proven strategies, your Etsy store becomes a conversion powerhouse, turning visitors into loyal customers. Stay ahead of the competition, as we continuously refine and adapt your store for optimal performance in the ever-evolving ecommerce landscape. Experience the transformation – elevate your Etsy store with our Optimization Services today!</p>
+          <p className='text-white text-md py-6'>With our proven strategies, your Etsy store becomes a conversion powerhouse, turning visitors into loyal customers. Stay ahead of the competition, as we continuously refine and adapt your store for optimal performance in the ever-evolving ecommerce landscape. Experience the transformation – elevate your Etsy store with our Optimization Services today!</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -1431,7 +1431,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Etsy Product Hunting</h2>
-          <p className='text-white text-xl'>We will transform your ecommerce strategy with expertly curated products. Our dedicated team employs strategic research and trend analysis to uncover high-potential, in-demand items for your Etsy store. From niche finds to trending bestsellers, our Product Hunting Services aim to elevate your inventory and keep your offerings fresh and captivating.</p>
+          <p className='text-white text-md py-6'>We will transform your ecommerce strategy with expertly curated products. Our dedicated team employs strategic research and trend analysis to uncover high-potential, in-demand items for your Etsy store. From niche finds to trending bestsellers, our Product Hunting Services aim to elevate your inventory and keep your offerings fresh and captivating.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',
@@ -1482,7 +1482,7 @@ const ServicesSection = () => {
           }}
         >
           <h2 className='text-white font-semibold text-2xl' style={{ marginBottom: '20px' }}>Etsy Store Marketing</h2>
-          <p className='text-white text-xl'>Embrace a holistic marketing strategy that positions your brand at the forefront of the digital marketplace. With our Etsy Store Marketing services, witness the transformative power of strategic promotion, enhancing your store's visibility, and ultimately, your bottom line.</p>
+          <p className='text-white text-md py-6'>Embrace a holistic marketing strategy that positions your brand at the forefront of the digital marketplace. With our Etsy Store Marketing services, witness the transformative power of strategic promotion, enhancing your store's visibility, and ultimately, your bottom line.</p>
           <button className='mt-8 font-semibold'
             style={{
               backgroundColor: '#f2bd58',

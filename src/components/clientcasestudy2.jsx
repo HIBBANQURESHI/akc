@@ -1,6 +1,6 @@
 import React from "react";
 
-const ClientCaseStudy = ({ title, imageUrl, description, stats }) => {
+const ClientCaseStudy2 = ({ title, imageUrl, description, stats }) => {
   return (
     <div className="container p-4 mx-auto mb-4">
       <div className="text-center">
@@ -10,14 +10,16 @@ const ClientCaseStudy = ({ title, imageUrl, description, stats }) => {
 
       <div className="flex flex-col items-center justify-center gap-8 lg:flex-row">
         <img
-          src={'https://inbound.ltd/wp-content/uploads/2024/01/3-%E2%80%93-Desktop-3-1.webp'}
+          src={'https://cdn3d.iconscout.com/3d/free/thumb/free-meta-3d-icon-download-in-png-blend-fbx-gltf-file-formats--logo-social-media-app-pack-logos-icons-8250233.png?f=webp'}
           alt={title}
           className="rounded-lg shadow-md lg:w-1/3"
         />
 
         <div className="text-left lg:w-2/3">
-          <h3 className="text-2xl font-bold text-white">Transforming Online Presence</h3>
-          <p className="mt-2 text-gray-700 text-white">AKCLinkTech has established itself as a premier design agency, specializing in enhancing online visibility and user engagement. Their expertise not only transformed our website but also significantly improved our brand retention through effective SEO strategies.</p>
+          <h3 className="text-2xl font-bold text-white">Boosting Social Media Presence</h3>
+          <p className="mt-2 text-gray-700 text-white">
+            Our SMM team successfully enhanced {title}'s online engagement and brand visibility through targeted social media campaigns. By leveraging influencer collaborations, interactive content, and data-driven strategies, we significantly increased their follower base and audience interaction across major platforms.
+          </p>
 
           <div className="flex justify-between mt-4">
             {stats.map((stat, index) => (
@@ -33,4 +35,4 @@ const ClientCaseStudy = ({ title, imageUrl, description, stats }) => {
   );
 };
 
-export default ClientCaseStudy;
+export default ClientCaseStudy2;

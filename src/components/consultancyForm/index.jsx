@@ -133,9 +133,9 @@ const ConsultancyForm = () => {
     // <div className="bg flex items-center justify-center bg-gray-100 to-gray-800 p-6 pb-32">
     //   <div className="w-full max-w-6xl p-6 bg-white rounded-lg shadow-lg">
              <div className="bg flex items-center justify-center bg-gray-100 to-gray-800 p-6">
-             <div className="w-full max-w-6xl p-6 bg-white rounded-lg shadow-lg">
+             <div className="w-full max-w-6xl p-6 bg-transparent rounded-lg shadow-lg">
         <h2 className="mb-6 text-3xl font-bold text-center text-yellow-500">Get Free Consultancy</h2>
-        <p className="mb-8 text-center text-gray-700">
+        <p className="mb-8 text-center text-white">
           If you're interested in speaking with us about an upcoming project, please fill out the form below, and we'll get in touch with you.
         </p>
 
@@ -203,7 +203,7 @@ const ConsultancyForm = () => {
 
           <div className="flex items-center space-x-3">
             <input type="checkbox" id="newsletter" className="text-gray-600 focus:ring-0" />
-            <label htmlFor="newsletter" className="text-gray-700">
+            <label htmlFor="newsletter" className="text-white">
               Subscribe to our weekly newsletter.
             </label>
           </div>

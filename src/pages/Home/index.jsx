@@ -61,6 +61,7 @@ const Home = () => {
             display: 'flex',
             flexDirection: 'column',
             width: '100%',
+            height:'75%',
             maxWidth: '500px',
             padding: '40px',
             color: '#333',
@@ -82,42 +83,44 @@ const Home = () => {
           }}>
             &times;
           </button>
-          <h1 style={{ marginBottom: '20px', fontWeight: '600', fontSize: '24px' }} className='text-yellow-500 font-bold'>Contact Us</h1>
-          <p style={{ marginBottom: '20px', fontSize: '16px' }} className='text-yellow-500 font-semibold'>For more information, please complete this form.</p>
+          <h1 style={{ marginBottom: '20px', fontWeight: '600', fontSize: '24px' }} className='text-yellow-400 font-bold text-2xl'>Contact Us</h1>
+          <p style={{ marginBottom: '20px', fontSize: '16px' }} className='text-yellow-400 font-semibold py-6 text-md'>For more information, please complete this form.</p>
           <form action="">
-            <div className="form-group" style={{ marginBottom: '15px' }}>
-              <label style={{ fontWeight: '600', marginBottom: '5px' }} className='text-yellow-500'>Name</label>
+            <div className="form-group" style={{ marginBottom: '19px' }}>
+              <label style={{ fontWeight: '600', marginBottom: '5px' }} className='text-white'>Name</label>
               <input type="text" className="form-control" style={{
-                backgroundColor: '#f9f9f9',
-                color: '#333',
-                border: '1px solid #ccc',
-                padding: '10px',
+                backgroundColor: 'black',
+                color: '#fff',
+                border: '1px solid #f9a825',
+                padding: '5px',
                 width: '100%',
-                borderRadius: '4px',
+                borderRadius: '15px',
                 fontSize: '16px',
               }} />
             </div>
-            <div className="form-group" style={{ marginBottom: '15px' }}>
-              <label style={{ fontWeight: '600', marginBottom: '5px' }} className='text-yellow-500'>E-Mail Address</label>
+            <div className="form-group" style={{ marginBottom: '15px', marginTop: '50px', }}>
+              <label style={{ fontWeight: '600', marginBottom: '5px' }} className='text-white'>E-Mail Address</label>
               <input type="text" className="form-control" style={{
-                backgroundColor: '#f9f9f9',
-                color: '#333',
-                border: '1px solid #ccc',
-                padding: '10px',
+                backgroundColor: 'black',
+                color: '#fff',
+                border: '1px solid #f9a825',
+                padding: '5px',
                 width: '100%',
-                borderRadius: '4px',
+                borderRadius: '15px',
+                marginTop: '30px',
                 fontSize: '16px',
               }} />
             </div>
-            <div className="form-group" style={{ marginBottom: '15px' }}>
-              <label style={{ fontWeight: '600', marginBottom: '5px' }} className='text-yellow-500'>Phone Number</label>
+            <div className="form-group" style={{ marginBottom: '15px', marginTop: '50px',}}>
+              <label style={{ fontWeight: '600', marginBottom: '5px' }} className='text-white'>Phone Number</label>
               <input type="text" className="form-control" style={{
-                backgroundColor: '#f9f9f9',
-                color: '#333',
-                border: '1px solid #ccc',
-                padding: '10px',
+                backgroundColor: 'black',
+                color: '#fff',
+                border: '1px solid #f9a825',
+                padding: '5px',
                 width: '100%',
-                borderRadius: '4px',
+                borderRadius: '15px',
+                marginTop: '30px',
                 fontSize: '16px',
               }} />
             </div>
@@ -133,10 +136,11 @@ const Home = () => {
                 borderRadius: '4px',
                 cursor: 'pointer',
                 fontSize: '16px',
-                marginTop: '10px',
+                marginTop: '50px',
+                marginLeft: '10px',
                 transition: 'background-color 0.3s, color 0.3s', // Smooth transition
               }}
-              className='font-semibold bg-yellow-500'
+              className='font-semibold bg-yellow-500 w-96 px-10'
             >
               Submit
             </button>

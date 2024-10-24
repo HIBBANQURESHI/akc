@@ -17,7 +17,7 @@ const PricingCard = ({ title, price, features, buttonText, onButtonClick }) => {
       <div className="flex-grow overflow-y-auto" style={{ maxHeight: '200px' }}>
         <ul className="my-4 space-y-3 text-center scrollbar-thin">
           {features.map((feature, index) => (
-            <li key={index} className="text-sm md:text-base font-semibold">
+            <li key={index} className="text-sm md:text-base font-semibold text-match-parent;">
               {feature}
             </li>
           ))}
@@ -27,7 +27,7 @@ const PricingCard = ({ title, price, features, buttonText, onButtonClick }) => {
       {/* Button */}
       <button
         onClick={onButtonClick}
-        className="mt-4 px-4 py-2 bg-yellow-300 text-black font-bold rounded-full transition-colors duration-300 hover:bg-yellow-900 hover:text-white border-2 border-black"
+        className="mt-4 px-4 py-2 bg-yellow-400 text-black font-bold rounded-full transition-colors duration-300 hover:bg-yellow-500 hover:text-white border-2 border-black"
       >
         {buttonText}
       </button>

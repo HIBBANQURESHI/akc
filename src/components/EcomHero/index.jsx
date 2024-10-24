@@ -62,7 +62,7 @@ const styles = {
     marginBottom: '20px',
   },
   button: {
-    backgroundColor: '#FBC02D',
+    backgroundColor: '#f9a825',
     color: '#000',
     border: 'none',
     padding: '15px 30px',

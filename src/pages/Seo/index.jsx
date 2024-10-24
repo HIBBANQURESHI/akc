@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import HeroService from "../../components/heroService";
 import heroImg from "../../assets/img/seo.webp";
 import Layout from "../../layout";
@@ -26,107 +26,151 @@ import Testimonials from "../../components/testimonials";
 
 //contentSection image
 import contentSectionImg from "../../assets/banner/seo/seo-content-01.webp";
+import contentSectionImg2 from "../../assets/banner/seo/seo-content-02.png";
 import Content from "../../components/content";
 
 
-//case study image
+//case study image 
 import caseStudyImg from "../../assets/banner/digital-seo-01.webp"
 
 import ClientCaseStudy from "../../components/clientCaseStudy";
+import SEOExpertise from "../../components/seoexpertise";
+import SMMExpertise from "../../components/seoexpertise2";
+import ClientCaseStudy2 from "../../components/clientcasestudy2";
+import OrderForm from "../../components/OrderForm/index.jsx";
 
 
-const pricingPlans = {
+const Seo = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    projectDetails: '',
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState(null);
+
+
+
+  const pricingPlans = {
   logo: [
     {
-      title: 'LOGO SPECIAL',
-      price: '59.00',
+      title: 'SEO BASIC',
+      price: '299.00',
       features: [
-        '4 Original Logo Concepts',
-        '2 Dedicated Logo Designers',
-        '4 Revisions',
-        'Grey Scale Format',
-        'Free Icon Design',
-        'Formats: JPEG Only',
-        '24 - 48 Hours Turn Around Time',
+        '10 Keywords Optimization',
+        '4 Keywords in top 10',
+        'Search Engine Submissions',
+        '2 Blogs Writing',
+        '4 Blog Posting Links',
+        '10 Blogs Social Bookmarking Links',
+        '1 Press Release Writing',
+        '2 Press Release Links',
       ],
       buttonText: 'Order Now',
-      onButtonClick: () => alert('Order Logo Special'),
+      onButtonClick: () => {
+        setSelectedPlan({ title: 'SEO BASIC', price: '299.00' });
+        setIsModalOpen(true);
+      },
     },
     {
-      title: 'LOGO PLUS',
-      price: '199.00',
+      title: 'SEO STANDARD',
+      price: '499.00',
       features: [
-        '8 Original Logo Concepts',
-        '3 Dedicated Logo Designers',
-        '8 Revisions',
-        'Business Card Design',
-        'Formats: PNG, JPEG, PDF',
+        '25 Keywords Optimization',
+        '10 Keywords in Top 10',
+        'Search Engine Submissions',
+        '6 Blogs Writing',
+        '12 Blog Posting Links',
+        '20 Blogs Social Bookmarking Links',
+        '2 Press Release Writing',
+        '4 Press Release Links',
       ],
       buttonText: 'Order Now',
-      onButtonClick: () => alert('Order Logo Plus'),
+      onButtonClick: () => {
+        setSelectedPlan({ title: 'SEO STANDARD', price: '499.00' });
+        setIsModalOpen(true);
+      },
     },
     {
-      title: 'LOGO PLATINUM',
+      title: 'SEO PROFESSIONAL',
       price: '399.00',
       features: [
-        '12 Original Logo Concepts',
-        '4 Dedicated Logo Designers',
-        'Unlimited Revisions',
-        'Business Card & Letterhead Design',
-        'Grey Scale & Color Formats',
-        'Formats: PNG, JPEG, PDF, AI',
-        '48 Hours Turn Around Time',
+        '50 Keywords Optimization',
+        '20 Keywords in Top 10',
+        '14 Blogs Writing',
+        '28 Blog Posting Links',
+        '30 Blogs Social Bookmarking Links',
+        '4 Press Release Writing',
+        '8 Press Release Links',
+        '4 Guest Blogging Links',
       ],
       buttonText: 'Order Now',
-      onButtonClick: () => alert('Order Logo Platinum'),
+      onButtonClick: () => {
+        setSelectedPlan({ title: 'SEO PROFESSIONAL', price: '399.00' });
+        setIsModalOpen(true);
+      },
     },
     {
-      title: 'LOGO BOSS',
+      title: 'SMM STARTUP',
       price: '599.00',
       features: [
-        '16 Original Logo Concepts',
-        '5 Dedicated Logo Designers',
-        'Unlimited Revisions',
-        'Complete Stationery Design',
-        'Grey Scale & Color Formats',
-        'Formats: PNG, JPEG, PDF, AI',
-        '3D Mockup Included',
-        '24 Hours Turn Around Time',
+        '2 Social Media Channels (Facebook / Instagram)',
+        'Social media account setup',
+        'Complete Account Management',
+        '3 Posts per week (per network)',
+        'Custom Editorial calendar (Review before publishing)',
+        'Dedicated account manager',
+        'Dedicated Budget For Paid Advertising',
       ],
       buttonText: 'Order Now',
-      onButtonClick: () => alert('Order Logo Boss'),
+      onButtonClick: () => {
+        setSelectedPlan({ title: 'SMM STARTUP', price: '599.00' });
+        setIsModalOpen(true);
+      },
     },
     {
-      title: 'LOGO INFINITE',
+      title: 'SMM BASIC',
       price: '1259.00',
       features: [
-        'Unlimited Original Logo Concepts',
-        '6 Dedicated Logo Designers',
-        'Unlimited Revisions',
-        'Complete Branding Package',
-        'Business Card & Letterhead Design',
-        '3D Mockup',
-        'Formats: PNG, JPEG, PDF, AI, SVG',
-        '24 - 48 Hours Turn Around Time',
+        '4 Social Media Channels (Facebook / Twitter / Pinterest / Instagram)',
+        'Social media account setup',
+        'Complete Account Management 3 Posts per week (per network)',
+        'Custom Editorial calendar (Review before publishing)',
+        'Call to Action Integration',
+        'End of Term Report',
+        'Dedicated Account Manager',
+        'Dedicated Budget For Paid Advertising',
       ],
       buttonText: 'Order Now',
-      onButtonClick: () => alert('Order Logo Infinite'),
+      onButtonClick: () => {
+        setSelectedPlan({ title: 'SMM BASIC', price: '1259.00' });
+        setIsModalOpen(true);
+      },
     },
     {
-      title: 'LOGO COMBO',
+      title: 'SMM PLUS',
       price: '1499.00',
       features: [
-        'Unlimited Original Logo Concepts',
-        '7 Dedicated Logo Designers',
-        'Unlimited Revisions',
-        'Complete Branding & Stationery Package',
-        'Social Media Kit',
-        '3D Mockup',
-        'Formats: PNG, JPEG, PDF, AI, SVG',
-        '24 Hours Turn Around Time',
+        '6 Social Media Channels (Facebook / Twitter / Pinterest/ Instagram / Youtube / LinkedIn)',
+        'Social media account setup',
+        'Complete Account Management',
+        '4 Posts per week (per network)',
+        '1 GIF post per Month',
+        'Custom Editorial calendar (Review before publishing)(Facebook)',
+        'Call to Action Integration',
+        '1 Stock Video Cover Banner',
+        'Monthly Analytic Report',
+        'Direct Access To Social Media Team',
+        'Dedicated Budget For Paid Advertising',
       ],
       buttonText: 'Order Now',
-      onButtonClick: () => alert('Order Logo Combo'),
+      onButtonClick: () => {
+        setSelectedPlan({ title: 'SMM PLUS', price: '1499.00' });
+        setIsModalOpen(true);
+      },
     },
   ],
   branding: [
@@ -204,11 +248,11 @@ const OfferData = [
 ];
 
 const content = {
-  title: "Custom Web Design & Development Services In USA",
+  title: "Enhance Your Business With SEO and SMM",
   description:
-    "Engage your audience with appealing website design and responsive development. The website is where your customers will understand your business and credibility in the industry. We are the leading web design and development agency in the USA, providing complete design and development solutions to create useful web solutions for clients.",
+    "Our aim with SEO and SMM strategies is to bring the maximum leads to your website and with relevant audiences increase the conversion rate over a period of time. Depending on our business industry and competitors, we strategize a roadmap especially for you. Alongside improving your business ranking, we also work to increase the credibility of your business. With us, you get promised ranking, exposure, and enhanced business credibility.",
   subDescription:
-    "We have a team of creative designers and skilled developers who are experienced in delivering the best web solutions.",
+    "The Ranking of your business over the SERPs is one of the concerning factors that influence your digital business presence. With a combination of search engine optimization and search engine marketing strategies, We work with your business presence and ranking of the internet.",
 };
 
 const faqsData = [
@@ -280,47 +324,33 @@ const testimonials = [
 
 const contentDescriptionData = [
   {
-    title: 'SEO - SEM',
-    subtitle: 'Search Engine Optimization and Marketing',
+    title: 'SEO',
+    subtitle: 'Search Engine Optimization',
     content:
-      'Incorporate organic and paid optimized marketing strategies to enhance the visibility of your business...',
+      'Leverage organic and paid search strategies to boost your business visibility online. Our SEO services are designed to drive traffic, improve rankings, and convert leads by optimizing your website and content for search engines.',
     listItems: [
-      'Customized Strategies',
-      'Lead Conversions',
-      'Increased Authentication',
-      'Ranking in SERPs',
-      'Website Optimization',
+      'Tailored SEO Strategies',
+      'On-Page & Off-Page Optimization',
+      'Improved Search Rankings',
+      'Conversion Rate Optimization',
+      'Comprehensive Website Audits',
     ],
     buttonText: 'Request a Custom Quote',
     image: contentSectionImg,
-  },
+  },  
   {
-    title: 'SMO - SME',
-    subtitle: 'Social Media Optimization and Marketing',
+    title: 'SMM',
+    subtitle: 'Social Media Marketing',
     content:
-      'Social media strategies focused on improving your brand presence on social media platforms...',
+      'Boost your brand visibility and connect with your audience through customized social media marketing solutions. We create platform-specific strategies, engaging content, and effective community management to ensure your brand stays relevant and grows across all channels.',
     listItems: [
-      'Platform-Specific Strategies',
-      'Content Creation',
-      'Engagement Boosting',
-      'Community Management',
+      'Social Media Strategy Development',
+      'Targeted Ad Campaigns',
+      'Influencer Partnerships',
+      'Analytics & Reporting',
     ],
     buttonText: 'Request a Custom Quote',
-    image: contentSectionImg,
-  },
-  {
-    title: 'Content Creation',
-    subtitle: 'Social Media Optimization and Marketing',
-    content:
-      'Social media strategies focused on improving your brand presence on social media platforms...',
-    listItems: [
-      'Platform-Specific Strategies',
-      'Content Creation',
-      'Engagement Boosting',
-      'Community Management',
-    ],
-    buttonText: 'Request a Custom Quote',
-    image: contentSectionImg,
+    image: contentSectionImg2,
   },
 ];
 
@@ -336,8 +366,31 @@ const caseStudyData = {
   ],
 };
 
-const Seo = () => {
+const closeModal = () => {
+  setIsModalOpen(false);
+};
 
+const openModal = (plan) => {
+  setSelectedPlan(plan); // Pass selected plan to the modal if needed
+  setIsModalOpen(true);
+};
+
+// Close modal when clicking outside of it
+const handleClickOutside = (event) => {
+  if (modalRef.current && !modalRef.current.contains(event.target)) {
+    closeModal();
+  }
+};
+
+useEffect(() => {
+  // Add event listener
+  document.addEventListener('mousedown', handleClickOutside);
+  
+  // Cleanup event listener on component unmount
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutside);
+  };
+}, []);
 
   return (
     <Layout>
@@ -356,21 +409,74 @@ const Seo = () => {
         subDescription={content.subDescription}
       />
       <Content sections={contentDescriptionData}/>
+
+      <SEOExpertise/>
+
+      <ClientCaseStudy {...caseStudyData}/>
+
+      <SMMExpertise/>
+
+      <ClientCaseStudy2 {...caseStudyData}/>
+
       <PricingService
         plans={pricingPlans}
         heading="Crafting Perfect Logo Packages for Corporations Globally"
         description="Our team of experts focus on client and customer satisfaction as the ultimate goal for our projects."
       />
-      <OfferService sections={OfferData} />
-      <ClientCaseStudy {...caseStudyData}/>
-      <FeatureSection/>
-      {/* <SampleGallery galleryData={galleryData}/> */}
       <DetailsSection/>
-      <DesignGuide/>
       {/* <FAQSection faqsData={faqsData}/> */}
       <Consultancy/>
       <Testimonials testimonialData ={testimonials}/>
       <ConsultancyForm/>
+
+      {/* Modal for OrderForm */}
+      {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>&times;</span>
+            <OrderForm plan={selectedPlan} />
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+        .modal {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+        .modal-content {
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          width: 1240px;
+          height: auto;
+          border-radius: '8px',
+          position: relative;
+          color: #FFD700; /* Keep yellow text */
+          background-color: transparent; /* Remove form background color */
+        }
+        .close {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          color: #aaa;
+          font-size: 28px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+          color: red;
+        }
+      `}</style>
       
     </Layout>
   );

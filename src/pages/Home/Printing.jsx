@@ -117,10 +117,10 @@ const Printing = () => {
         <section className="py-10">
           <div className="max-w-screen-xl flex justify-center mx-auto  px-4 py-10 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex">
             <div className="flex-none mt-20 space-y-5 max-w-xl">
-              <h1 className="text-4xl text-gray-800 font-extrabold sm:text-5xl">
+              <h1 className="text-4xl text-white font-extrabold sm:text-5xl">
                 Your Premier Printing Specialists
               </h1>
-              <p>
+              <p className="text-yellow-500">
                 Revolutionizing your brand with uncompromising commitment,
                 creative approach, and absolute content.
               </p>
@@ -164,7 +164,7 @@ const Printing = () => {
               </div>
 
               <div className="flex flex-col">
-                <h1 className="font-bold p-3 pb-5 md:text-2xl">Acheviments</h1>
+                <h1 className="font-bold p-3 pb-5 md:text-2xl text-white">Acheviments</h1>
                 <div className="flex items-center">
                   <img className="mx-4" src={b1} alt={b1} />
                   <img className="mx-4" src={b2} alt={b2} />
