@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFormVisible(true);
-    }, 5000); // Show form after 5 seconds
+    }, 3000); // Show form after 5 seconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -86,48 +86,66 @@ const Home = () => {
     <h1 style={{ marginBottom: '20px', fontWeight: '750', fontSize: '40px' }} className='text-white'>Get a Free Quote</h1>
     <p style={{ marginBottom: '20px', fontSize: '16px' }} className='text-gray-400 font-semibold py-3 text-md'>Fill out the form below and we’ll be in touch to discuss your project.</p>
     <form action="">
-      <div className="form-group" style={{ marginBottom: '15px' }}>
-        <label style={{ fontWeight: '600', marginBottom: '5px', display: 'block' }} className='text-gray-400'>Name</label>
-        <input type="text" className="form-control" style={{
-          backgroundColor: 'black',
-          color: '#fff',
-          border: 'none',
-          borderBottom: '2px solid #fff', // Single underline
-          padding: '5px',
-          width: '100%',
-          borderRadius: '0', // Remove rounded edges
-          fontSize: '16px',
-          outline: 'none',
-        }} />
+    <div className="form-group" style={{ marginBottom: '15px' }}>
+  <label style={{ fontWeight: '600', display: 'block' }} className='text-gray-800'></label>
+  <input
+    type="text"
+    className="form-control"
+    style={{
+      backgroundColor: 'black',
+      color: '#fff',
+      border: 'none',
+      borderBottom: '2px solid #718096', // Single underline
+      width: '100%',
+      borderRadius: '0', // Remove rounded edges
+      fontSize: '16px',
+      outline: 'none',
+      padding: '5px 0',
+      transition: 'border-color 0.3s ease-in-out', // Add smooth transition
+    }}
+    placeholder="Your Name" // Add placeholder for clarity
+  />
       </div>
       <div className="form-group" style={{ marginBottom: '15px', marginTop: '30px' }}>
-        <label style={{ fontWeight: '600', marginBottom: '5px', display: 'block' }} className='text-gray-400'>E-Mail Address</label>
-        <input type="text" className="form-control" style={{
-          backgroundColor: 'black',
-          color: '#fff',
-          border: 'none',
-          borderBottom: '2px solid #fff', // Single underline
-          padding: '5px',
-          width: '100%',
-          borderRadius: '0', // Remove rounded edges
-          fontSize: '16px',
-          outline: 'none',
-        }} />
-      </div>
-      <div className="form-group" style={{ marginBottom: '15px', marginTop: '30px' }}>
-        <label style={{ fontWeight: '600', marginBottom: '5px', display: 'block' }} className='text-gray-400'>Phone Number</label>
-        <input type="text" className="form-control" style={{
-          backgroundColor: 'black',
-          color: '#fff',
-          border: 'none',
-          borderBottom: '2px solid #fff', // Single underline
-          padding: '5px',
-          width: '100%',
-          borderRadius: '0', // Remove rounded edges
-          fontSize: '16px',
-          outline: 'none',
-        }} />
-      </div>
+  <label style={{ fontWeight: '600', marginBottom: '5px', display: 'block' }} className='text-gray-800'></label>
+  <input
+    type="text"
+    className="form-control"
+    style={{
+      backgroundColor: 'black',
+      color: '#fff',
+      border: 'none',
+      borderBottom: '2px solid #718096', // Single underline
+      width: '100%',
+      borderRadius: '0', // Remove rounded edges
+      fontSize: '16px',
+      outline: 'none',
+      padding: '5px 0',
+      transition: 'border-color 0.3s ease-in-out', // Add smooth transition
+    }}
+    placeholder="Your Email Address" // Add placeholder for clarity
+  />
+</div>
+<div className="form-group" style={{ marginBottom: '15px', marginTop: '30px' }}>
+  <label style={{ fontWeight: '600', marginBottom: '5px', display: 'block' }} className='text-gray-800'></label>
+  <input
+    type="text"
+    className="form-control"
+    style={{
+      backgroundColor: 'black',
+      color: '#fff',
+      border: 'none',
+      borderBottom: '2px solid #718096', // Single underline
+      width: '100%',
+      borderRadius: '0', // Remove rounded edges
+      fontSize: '16px',
+      outline: 'none',
+      padding: '5px 0',
+      transition: 'border-color 0.3s ease-in-out', // Add smooth transition
+    }}
+    placeholder="Your Phone Number" // Add placeholder for clarity
+  />
+</div>
       <button
         type="submit"
         onMouseEnter={() => setIsHovered(true)}
@@ -148,6 +166,7 @@ const Home = () => {
       >
         Submit
       </button>
+      <div className='py-8 text-left text-gray-700 text-sm'>Disclaimer: By providing a telephone number and submitting this form, you are consenting to be contacted by SMS text message. Message &amp; data rates may apply. You can reply STOP to opt-out of further messaging.</div>
     </form>
         </div>
       </div>
