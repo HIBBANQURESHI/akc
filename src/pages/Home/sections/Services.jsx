@@ -1,105 +1,66 @@
 import React from "react";
-import {
-  FaLaptop,
-  FaCode,
-  FaPaintBrush,
-  FaWrench,
-  FaShoppingCart,
-  FaBullhorn,
-} from "react-icons/fa";
+import { FaMobileAlt, FaLaptopCode, FaPencilAlt, FaStore, FaShoppingBasket, FaBullseye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const cardData = [
   {
-    title: "Website Design",
-    description:
-      "We believe in creating attractive and responsive designs that will make your website extremely interactive and user friendly. You can positively depend on our website design services and development services as our highly skilled team members are brilliant at their work and due to which we are able to provide the best website design services.",
-    icon: <FaLaptop size={40} />,
-    link: "/web-design",
+    title: "App Development",
+    description: "Our app development services are dedicated to creating user-friendly and highly functional mobile applications tailored to meet your unique business needs. We leverage the latest technologies and industry best practices to deliver solutions that not only enhance user experience but also drive engagement and growth. Whether you’re looking to streamline operations or connect with customers more effectively, our skilled team will work closely with you to transform your ideas into innovative mobile applications that make a lasting impact.",
+    icon: <FaMobileAlt size={40} />,
+    link: "/mobile",
   },
   {
     title: "Website Development",
-    description:
-      "Our goal is to develop websites that help businesses and brands to become a global influence. We will help you to expand your market size, get new sales in and create awareness. To develop a website the correct way, you need to select the right web development services company who will cater to your unique requests.",
-    icon: <FaCode size={40} />,
+    description: "We specialize in crafting robust and scalable websites that not only elevate your brand but also drive significant business growth. Our expert team combines innovative design with cutting-edge technology to create user-friendly experiences that captivate your audience. Whether you need a dynamic e-commerce platform or a polished corporate website, we are dedicated to delivering solutions that empower your business and foster lasting connections with your customers.",
+    icon: <FaLaptopCode size={40} />,
     link: "/web-design",
   },
   {
-    title: "Graphic Design",
-    description:
-      "The logo design of a business or brand sets the tone for how your targeted audience perceives your brand and acts as the jumping off point for all of your branding elements. As a result, hiring local designers with experience is important. DesignMaze is a graphic design agency that has an experienced team which creates...",
-    icon: <FaPaintBrush size={40} />,
+    title: "Logo and Branding",
+    description: "A strong brand identity starts with an exceptional logo. Our team of expert designers is committed to helping you create a memorable and impactful logo that captures the essence of your brand. We understand that a well-designed logo is more than just an image; it’s a powerful tool that communicates your values and connects with your audience. Let us collaborate with you to bring your vision to life and establish a lasting impression in your market.",
+    icon: <FaPencilAlt size={40} />,
     link: "/logo-branding",
   },
   {
-    title: "Website Maintenance",
-    description:
-      "Whenever you look up online to find a certain object, your search will make you discover so many new businesses, products, and services related to that object. And that’s not even 0.000001% of the online businesses present on the internet.",
-    icon: <FaWrench size={40} />,
-    link: "/web-design",
+    title: "Ecom-Experts",
+    description: "We recognize the dynamic nature of online shopping and the ever-evolving expectations of consumers. Our e-commerce solutions are meticulously tailored to enhance user experience, ensuring that every interaction is seamless and engaging. From intuitive navigation to streamlined checkout processes, we design platforms that not only attract customers but also foster loyalty. Let us empower your online store with innovative features and personalized experiences that drive sales and elevate your brand in the competitive e-commerce landscape.",
+    icon: <FaStore size={40} />,
+    link: "/ecom-experts",
   },
   {
     title: "E-Commerce Website",
-    description:
-      "DesignMaze, an ecommerce website development company and web development services company knows the value of using the most up-to-date technologies to increase the viability of your online shop, which is why we built a ECommerce platform.",
-    icon: <FaShoppingCart size={40} />,
+    description: "We specialize in creating e-commerce websites that are not only visually appealing but also rich in functionality. Our designs blend aesthetic excellence with seamless usability, ensuring that your online store captivates visitors while providing them with an intuitive shopping experience. By incorporating the latest technologies and features, we empower your e-commerce platform to engage customers effectively, streamline transactions, and drive business growth. Let us help you build a stunning online presence that stands out in today’s competitive marketplace.",
+    icon: <FaShoppingBasket size={40} />,
     link: "/web-design",
   },
   {
     title: "Digital Marketing",
-    description:
-      "We provide solutions for brands and businesses to go digital and reach the peak of success in this digital age. Internet and smart devices have changed the way customers engage with brands. We will help your business to transform adjust to those changes and flourish.",
-    icon: <FaBullhorn size={40} />,
+    description: "We provide comprehensive digital marketing services designed to enhance your online presence and deliver measurable results. Our expert team employs a strategic approach that encompasses SEO, content marketing, social media management, and pay-per-click advertising to ensure your brand reaches its target audience effectively. By leveraging data-driven insights and the latest industry trends, we create tailored marketing solutions that not only increase visibility but also drive engagement and conversions. Partner with us to elevate your digital strategy and achieve your business goals.",
+    icon: <FaBullseye size={40} />,
     link: "/digital-seo",
   },
 ];
 
-function ServicesSection() {
+const ServicesSection = () => {
   return (
     <section className="p-4 py-16 bg-white">
       <div className="container mx-auto text-center">
-        <h2 className="mb-6 text-4xl font-bold">
-          Giving Your Business Some Great Ideas
-        </h2>
+        <h2 className="mb-6 text-4xl font-bold">Giving Your Business Some Great Ideas</h2>
         <p className="mb-12 text-lg text-gray-600 font-semibold">
-          We offer Website Design and Maintenance, Logo Creation, and E-Commerce
-          design combined with management plans.
+          We offer Website Design and Maintenance, Logo Creation, and E-Commerce design combined with management plans.
         </p>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {cardData.map((card, index) => (
-            <div
-              key={index}
-              className="relative flex flex-col p-8 mt-10 mb-20 text-black transition-all duration-300 bg-white border-2 border-black rounded-lg cursor-pointer group hover:bg-yellow-400 hover:text-white hover:border-yellow-400"
-            >
-              <div className="absolute inset-0 m-1.5 border-2 border-black rounded-lg before:content-[''] before:absolute before:inset-0 before:border-2 before:border-transparent before:rounded-lg group-hover:before:border-transparent"></div>
-
+            <div key={index} className="relative flex flex-col p-8 mt-10 mb-20 text-black transition-all duration-300 bg-white border-2 border-black rounded-lg cursor-pointer group hover:bg-yellow-400 hover:text-white hover:border-yellow-400">
               <div className="absolute top-0 p-12 text-white transition-all duration-300 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-400 rounded-full left-1/2 group-hover:bg-white group-hover:text-yellow-400">
                 {card.icon}
               </div>
-
-              <h3 className="mt-20 mb-10 font-bold md:text-4xl flex-grow">
-                {card.title}
-              </h3>
-
-              <p className="p-5 mb-5 text-gray-600 transition-all duration-300 group-hover:text-white font-semibold flex-grow">
-                {card.description}
-              </p>
-
-              <div className="flex flex-col gap-2 mt-auto"> {/* Ensure buttons are at the bottom */}
-                <Link
-                  to={card.link}
-                  className="w-full px-4 py-2 bg-yellow-400 border rounded-xl group-hover:bg-white group-hover:text-yellow-800 font-semibold text-center"
-                >
-                  Let's talk about it
-                </Link>
-                <Link
-                  to="/contact-us"
-                  className="w-full px-4 py-2 text-white bg-gray-900 border border-black hover:bg-gray-100 hover:text-black rounded-xl font-semibold text-center"
-                >
-                  Learn More
-                </Link>
-              </div>
+              <h3 className="mt-20 mb-10 font-bold md:text-4xl flex-grow">{card.title}</h3>
+              <p className="p-5 mb-5 text-gray-600 transition-all duration-300 group-hover:text-white font-semibold flex-grow">{card.description}</p>
+              <Link to={card.link} className="w-full px-4 py-2 bg-yellow-400 border rounded-xl group-hover:bg-white group-hover:text-yellow-800 font-semibold text-center">
+                Let's talk about it
+              </Link>
             </div>
           ))}
         </div>

@@ -386,7 +386,7 @@ const LogoBranding = () => {
       <HeroService
         heading="Custom Logo Design Services That Create a Strong Impression"
         description="We create a visual identity that matters..."
-        primaryButtonText="Custom Website Design From $499"
+        primaryButtonText="Custom Logo Design From $35"
         secondaryButtonText="Live Chat"
         primaryButtonLink="/logo-branding"
         secondaryButtonLink="/live-chat"
